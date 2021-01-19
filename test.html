@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- <style>
+        body{
+            background-color: #666666;
+            margin: 50px;
+            text-align: center;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+        p{
+            font-family: 'Shadows Into Light', cursive;
+            font-size: x-large;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+            line-height: 10px;
+            text-align: left;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #FFFFCD;
+            transform: rotate(-5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            margin-right: 10px;
+            position: relative; 
+            display: inline-block;
+        }
+        .box2{
+            width: 250px;
+            height: 250px;
+            background-color: #CDFFCC;
+            display: inline-block;
+            box-shadow: 3px 3px 15px 5px black;
+            padding-left: 20px;
+            z-index: 2; /* it works ONLY when using postioned elements, (position: absolute, position: relative, position: fixed, or position: sticky)*/
+            position: relative;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: #CCCCFF;
+            display: inline-block;
+            transform: rotate(-5deg);
+            /* The horizontal offset, The vertical offset, The blur radius, The spread radius, The color */
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            position: relative;
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: #CDFFCC;
+            display: inline-block;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-right: 30px;
+            position: relative;
+        }
+        .box5{
+            width: 200px;
+            height: 200px;
+            background-color: #FFFFCD;
+            display: inline-block;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            margin-right: 30px;
+            position: relative;
+        }
+        .box6{
+            width: 200px;
+            height: 200px;
+            background-color: #CCCCFF;
+            display: inline-block;
+            transform: rotate(-5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            position: relative;
+        }
+    </style> -->
+    <style>
+        body{
+            background-color: #666666;
+            margin: 50px;
+            text-align: center;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+        }
+        p{
+            font-family: 'Shadows Into Light', cursive;
+            font-size: x-large;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+            line-height: 5px;
+            text-align: left;
+        }
+
+        /* Boxs */
+        .small_box{
+            width: 200px;
+            height: 200px;
+        }
+        .large_box{
+            width: 250px;
+            height: 250px;
+        }
+
+        /* Colors */
+        .bright_yellow{
+            background-color: #FFFFCD;
+        }
+        .bright_green{
+            background-color: #CDFFCC;
+        }
+        .bright_purple{
+            background-color: #CCCCFF;
+        }
+
+        /* Shadow */
+        .shadow{
+            box-shadow: 3px 3px 15px 1px black;
+        }
+
+        /* Rotation */
+        .left_rotation{
+            transform: rotate(-5deg);
+        }
+        .right_rotation{
+            transform: rotate(5deg);
+        }
+
+        /* Layout and Postion */
+        .right_margin{
+            margin-right: 30px;
+        }
+
+        .left_padding{
+            padding-left: 20px;
+        }
+
+        .relative_position{
+            position: relative; 
+        }
+        .inline_block{
+            display: inline-block;
+        }
+
+        .front_stack{
+            z-index: 2;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #FFFFCD;
+            transform: rotate(-5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            position: relative; 
+            display: inline-block;
+        }
+        .box2{
+            width: 250px;
+            height: 250px;
+            background-color: #CDFFCC;
+            display: inline-block;
+            box-shadow: 3px 3px 15px 5px black;
+            padding-left: 20px;
+            z-index: 2; /* it works ONLY when using postioned elements, (position: absolute, position: relative, position: fixed, or position: sticky)*/
+            position: relative;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: #CCCCFF;
+            display: inline-block;
+            transform: rotate(-5deg);
+            /* The horizontal offset, The vertical offset, The blur radius, The spread radius, The color */
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            position: relative;
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: #CDFFCC;
+            display: inline-block;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-right: 30px;
+            position: relative;
+        }
+        .box5{
+            width: 200px;
+            height: 200px;
+            background-color: #FFFFCD;
+            display: inline-block;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            margin-right: 30px;
+            position: relative;
+        }
+        .box6{
+            width: 200px;
+            height: 200px;
+            background-color: #CCCCFF;
+            display: inline-block;
+            transform: rotate(-5deg);
+            box-shadow: 3px 3px 15px 1px black;
+            padding-left: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="small_box bright_yellow shadow left_padding relative_position inline_block left_rotation">
+        <h2>Title #1</h2>
+        <p>Text Content</p>
+        <p>#1</p>
+    </div>
+    <div class="large_box bright_green shadow left_padding relative_position inline_block front_stack">
+        <h2>Title #2</h2>
+        <p>Text Content</p>
+        <p>#2</p>
+    </div>
+    <div class="small_box bright_purple shadow left_padding relative_position inline_block left_rotation">
+        <h2>Title #3</h2>
+        <p>Text Content</p>
+        <p>#3</p>
+    </div>
+    <br>
+    <div class="small_box bright_green shadow left_padding relative_position inline_block right_rotation right_margin">
+        <h2>Title #4</h2>
+        <p>Text Content</p>
+        <p>#4</p>
+    </div>
+    <div class="small_box bright_yellow shadow left_padding relative_position inline_block right_rotation right_margin">
+        <h2>Title #5</h2>
+        <p>Text Content</p>
+        <p>#5</p>
+    </div>
+    <div class="small_box bright_purple shadow left_padding relative_position inline_block left_rotation right_margin">
+        <h2>Title #6</h2>
+        <p>Text Content</p>
+        <p>#6</p>
+    </div>
+</body>
+</html>
